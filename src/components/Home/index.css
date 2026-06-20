@@ -1,0 +1,36 @@
+.home-container {
+  min-height: 90vh;
+  background-color: #e8dccb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  font-size: 48px;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  max-width: 900px;
+  margin-bottom: 25px;
+}
+
+.shop-btn {
+  padding: 12px 25px;
+  border: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}

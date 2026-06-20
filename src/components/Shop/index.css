@@ -1,0 +1,16 @@
+.shop-container {
+  padding: 40px;
+}
+
+.shop-container h1 {
+  text-align: center;
+  color: purple;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
