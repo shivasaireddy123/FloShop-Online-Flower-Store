@@ -1,6 +1,10 @@
-import './index.css';
+import {useContext} from 'react'
+import {CartContext} from '../../Context'
+import './index.css'
 
-const Card = ({ flower }) => {
+const Card = ({flower}) => {
+  const {addToCart} = useContext(CartContext)
+
   return (
     <div className="card">
       <img src={flower.imageUrl} alt={flower.name} />
@@ -9,9 +13,9 @@ const Card = ({ flower }) => {
 
       <p>₹{flower.price}</p>
 
-      <button>Add To Cart</button>
+      <button type="button" onClick={() => addToCart(flower)}>Add To Cart</button>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

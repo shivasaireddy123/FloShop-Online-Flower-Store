@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="contact-form-container">
           <h2>Send a Message</h2>
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={event => event.preventDefault()}>
             <input
               type="text"
               placeholder="Your Name"
