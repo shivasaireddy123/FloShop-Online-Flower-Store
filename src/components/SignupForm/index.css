@@ -1,4 +1,4 @@
-.signup-form-container {
+/* .signup-form-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -81,4 +81,345 @@
   font-size: 15px;
   cursor: pointer;
   font-weight: bold;
+} */
+
+
+
+.signup-form-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #faf5ff 0%,
+    #fff5fb 50%,
+    #f4f9ff 100%
+  );
+}
+
+/* Top flowers */
+.signup-form-container::before {
+  content: '🌺  🌸  🪻  🌷  🌸';
+
+  position: absolute;
+
+  top: 25px;
+  right: 15px;
+
+  font-size: 45px;
+
+  letter-spacing: 18px;
+
+  opacity: 0.75;
+
+  transform: rotate(8deg);
+
+  animation: flowerMove 5s ease-in-out infinite;
+}
+
+/* Bottom flowers */
+.signup-form-container::after {
+  content: '🌼  🌷  🌸  🪻  🌺';
+
+  position: absolute;
+
+  bottom: 25px;
+  left: 10px;
+
+  font-size: 45px;
+
+  letter-spacing: 18px;
+
+  opacity: 0.75;
+
+  transform: rotate(-8deg);
+
+  animation: flowerMove 6s ease-in-out infinite reverse;
+}
+
+/* Signup card */
+.signup-form {
+  position: relative;
+
+  z-index: 2;
+
+  width: 380px;
+
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-radius: 25px;
+
+  border: 2px solid #eadcf5;
+
+  box-shadow:
+    0 15px 40px rgba(130, 90, 160, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.07);
+
+  animation: signupAppear 0.8s ease-out;
+}
+
+/* Flower on signup card */
+.signup-form::before {
+  content: '🪻';
+
+  position: absolute;
+
+  top: -28px;
+  left: -22px;
+
+  font-size: 55px;
+
+  animation: flowerRotate 4s ease-in-out infinite;
+}
+
+/* Heading */
+.signup-form h1 {
+  text-align: center;
+
+  color: #82549c;
+
+  font-size: 32px;
+
+  margin-bottom: 30px;
+
+  font-family: Georgia, serif;
+}
+
+/* Input container */
+.signup-form .input-container {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.signup-form .input-label {
+  display: block;
+
+  color: #725c7d;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+.signup-form .username-input-field,
+.signup-form .password-input-field {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 2px solid #e4d7ec;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fdfaff;
+
+  color: #493950;
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+/* Input focus */
+.signup-form .username-input-field:focus,
+.signup-form .password-input-field:focus {
+  border-color: #a77bb8;
+
+  background: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(167, 123, 184, 0.2);
+}
+
+.signup-form .username-input-field::placeholder,
+.signup-form .password-input-field::placeholder {
+  color: #ad9bb5;
+}
+
+/* Signup button */
+.signup-button {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #a77bb8,
+    #82549c
+  );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 18px rgba(130, 84, 156, 0.3);
+}
+
+.signup-button:active {
+  transform: scale(0.97);
+}
+
+/* Error */
+.signup-form .error-message {
+  color: #c34d73;
+
+  background: #fff0f5;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  animation: shake 0.4s ease;
+}
+
+/* Sign in text */
+.signin-text {
+  text-align: center;
+
+  color: #78687e;
+
+  margin-top: 25px;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+}
+
+/* Sign in button */
+.signin-link-button {
+  display: block;
+
+  margin: auto;
+
+  border: none;
+
+  background: none;
+
+  color: #82549c;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.signin-link-button:hover {
+  color: #62377a;
+
+  transform: scale(1.05);
+}
+
+/* Flower movement */
+@keyframes flowerMove {
+  0%,
+  100% {
+    transform: translateY(0) rotate(8deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(4deg);
+  }
+}
+
+/* Flower rotation */
+@keyframes flowerRotate {
+  0%,
+  100% {
+    transform: rotate(-10deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(10deg) scale(1.1);
+  }
+}
+
+/* Signup entrance */
+@keyframes signupAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(40px)
+      scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* Error shake */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .signup-form {
+    width: calc(100% - 40px);
+
+    padding: 30px 20px;
+  }
+
+  .signup-form-container::before,
+  .signup-form-container::after {
+    font-size: 30px;
+
+    letter-spacing: 8px;
+  }
 }
